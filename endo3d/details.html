@@ -61,6 +61,23 @@ html,body{
   color: #fff;
 }
 
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
 
     </style>
     <title>endo3D</title>
@@ -76,11 +93,9 @@ html,body{
 	<span id="estructura" class="dato"></span>
 </div>
 
-
-<h1 id="titulo"></h1>
-<iframe width="420" height="315"
-src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
-</iframe>
+<div class="container">
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"></iframe>
+</div>
 
 
 <script>
