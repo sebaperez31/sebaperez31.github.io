@@ -9,7 +9,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
-  font-size: 50px;
+  font-size: 100px;
+  font-weight: bold;
 }
 
 html,body{
@@ -20,8 +21,8 @@ html,body{
 
 .encabezado{
   display: inline-flex;
-  background: #0069d9bf;
-  height: 100px;
+  background: #d40000;
+  height: 140px;
   width: 910px;
   align-items: center;
   justify-content: space-evenly;
@@ -31,7 +32,6 @@ html,body{
   margin-bottom: 20px;
   margin-right: 20px;
   margin-left: 20px;
-  font-weight: bold;
   color:#fff
 }
 
@@ -46,7 +46,7 @@ html,body{
 }
 
 .wrapper .dato{
-  background: #0069d9;
+  background: #d40000;
   height: 100%;
   width: 100%;
   display: flex;
@@ -85,7 +85,7 @@ html,body{
 <body>
 
 <div class="encabezado">
-	<label>Endo3D</label>
+	<label>endo3D</label>
 </div>
 
 <div class="wrapper">
@@ -105,8 +105,8 @@ window.onload = function() {
 	const urlParams = new URLSearchParams(url.search);
 	const diente = urlParams.get('diente')
 	const estructura = urlParams.get('estructura')
-	document.getElementById("diente").innerHTML = "Diente " + diente;
-	document.getElementById("estructura").innerHTML = "Estructura " + estructura;
+	document.getElementById("diente").innerHTML = diente.charAt(0) + "." + diente.charAt(1);
+	document.getElementById("estructura").innerHTML = "Anatomía " + estructura;
 };
 
 </script> 

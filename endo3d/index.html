@@ -9,7 +9,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
-  font-size: 50px;
+  font-size: 100px;
+  font-weight: bold;
 }
 
 html,body{
@@ -21,7 +22,7 @@ html,body{
 .encabezado{
   display: inline-flex;
   background: #d40000;
-  height: 100px;
+  height: 140px;
   width: 910px;
   align-items: center;
   justify-content: space-evenly;
@@ -31,8 +32,7 @@ html,body{
   margin-bottom: 20px;
   margin-right: 20px;
   margin-left: 20px;
-  font-weight: bold;
-  color:#fff
+  color:#fff;
 }
 
 .wrapper{
@@ -85,7 +85,7 @@ input[type="radio"]{
 }
 #option-1:checked:checked ~ .option-1,
 #option-2:checked:checked ~ .option-2{
-  border-color: #0069d9;
+  border-color: #d40000;
   background: #d40000;
 }
 #option-1:checked:checked ~ .option-1 .dot,
@@ -120,11 +120,11 @@ input[type="radio"]{
  <input type="radio" name="estructura" id="option-2" value="externa">
    <label for="option-1" class="option option-1">
      <div class="dot"></div>
-      <span>Estructura interna</span>
+      <span>Anatomía interna</span>
       </label>
    <label for="option-2" class="option option-2">
      <div class="dot"></div>
-      <span>Estructura externa</span>
+      <span>Anatomía externa</span>
    </label>
 </div>
 
