@@ -94,7 +94,7 @@ html,body{
 </div>
 
 <div class="container">
-  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"></iframe>
+  <iframe id="video" class="responsive-iframe"></iframe>
 </div>
 
 
@@ -107,8 +107,39 @@ window.onload = function() {
 	const estructura = urlParams.get('estructura')
 	document.getElementById("diente").innerHTML = diente.charAt(0) + "." + diente.charAt(1);
 	document.getElementById("estructura").innerHTML = "Anatomía " + estructura;
+	document.getElementById("video").src = "https://www.youtube.com/embed/" + getVideoId(diente, estructura) + "?autoplay=1&mute=1";
 };
 
+function getVideoId(diente, estructura){
+	if (estructura == "interna") {
+		switch (diente) {
+			case "14":
+				return "Kw6bn9edsqA";
+			case "23":
+				return "nIqn0-ql8g4";
+			case "16":
+				return "nseUAqNRHjw";
+			case "11":
+				return "yQ_jVHjinbo";
+			default:
+				return "tgbNymZ7vqY";
+		}
+	}
+	else{
+		switch (diente) {
+			case "14":
+				return "c5OjmwULBS4";
+			case "23":
+				return "3IPbAAlIaW0";
+			case "16":
+				return "eRvZ-e5Bitg";
+			case "11":
+				return "KZ8L_g0_zQg";	
+			default:
+				return "tgbNymZ7vqY";
+		}
+	}
+}
 </script> 
 
 </body>
